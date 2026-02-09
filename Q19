@@ -1,0 +1,10 @@
+import emoji
+
+# Example text containing emojis
+text = "I am very happy today 😊👍"
+
+# This is the method to Convert emojis into their text meaning
+converted_text = emoji.demojize(text)
+
+# Printing the text after conversion
+print(converted text)
