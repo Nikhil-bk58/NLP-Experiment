@@ -1,0 +1,12 @@
+ #This is the Original text stored in a variable
+text = "Machine Learning Is Fun"  
+
+print("Original Text:")
+print(text)
+
+#This is to Convert the text to lowercase
+
+lower_text = text.lower()   
+
+print("Lowercase Text:")
+print(lower_text)
