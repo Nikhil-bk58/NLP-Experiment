@@ -1,0 +1,26 @@
+import nltk
+from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import word_tokenize
+
+# Downloading necessary NLTK resources (only needed first time)
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+
+# Creating lemmatizer to convert words into base form
+lemmatizer = WordNetLemmatizer()
+
+# Example sentence
+text = "The children are playing and running in the gardens"
+
+# Tokenizing the sentence into individual words
+words = word_tokenize(text)
+
+#For Applying lemmatization to each word
+lemmatized_words = []
+for word in words:
+    lemmatized_words.append(lemmatizer.lemmatize(word))
+
+#  To Displaying original and lemmatized words
+print("Original Words:", words)
+print("Lemmatized Words:", lemmatized_words)
