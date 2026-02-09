@@ -1,0 +1,10 @@
+import re
+
+#  This is the Sample text containing URLs
+text = "Visit our website at https://www.example.com and http://test.com for more details."
+
+# Using regular expression to remove URLs from the text
+clean_text = re.sub(r'http\S+|www\S+', '', text)
+
+# Printing the cleaned text without URLs
+print(clean_text)
