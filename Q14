@@ -1,0 +1,26 @@
+# Function to remove punctuation marks from a given text
+def remove_punctuation(text):
+    # List of punctuation characters that we want to remove
+    punctuation = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+    
+    # Empty string to store the cleaned result
+    result = ""
+    
+    # Loop through each character in the input text
+    for char in text:
+        # If the character is not a punctuation mark, keep it
+        if char not in punctuation:
+            result = result + char   # Add the character to result
+    
+    # Return the final cleaned text without punctuation
+    return result
+
+
+# Sample text with punctuation
+text = "Hello, how are you? Welcome to Python!"
+
+# Calling the function to remove punctuation
+clean_text = remove_punctuation(text)
+
+# Printing the cleaned text
+print(clean_text)
