@@ -1,0 +1,28 @@
+# This is the common libraries used for import nltk 
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
+# Download required NLTK data (only needed the first time)
+nltk.download('punkt')
+nltk.download('stopwords')
+
+#  This is the Function to remove common stopwords from the text
+def remove_stopwords(text):
+    stop_words = set(stopwords.words('english'))
+    
+    # Tokenizing the sentence into words
+    words = word_tokenize(text)
+    
+    # Keeping only the words that are not stopwords
+    filtered_words = [word for word in words if word.lower() not in stop_words]
+    
+    return " ".join(filtered_words)
+
+
+# Sample text
+text = "This is a simple example to demonstrate stopword removal using NLTK"
+
+# Calling the function and printing cleaned text
+clean_text = remove_stopwords(text)
+print(clean_text)
+
